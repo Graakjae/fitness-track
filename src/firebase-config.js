@@ -3,7 +3,7 @@ import { getFirestore, collection } from "firebase/firestore";
 
 // firebaseConfig object copied from project in Firebase Console
 const firebaseConfig = {
-    apiKey: "AIzaSyAmn1wKQSk1sDqo4cnswYMa_x_yT7tER6Q",
+  apiKey: "AIzaSyAmn1wKQSk1sDqo4cnswYMa_x_yT7tER6Q",
   authDomain: "fitness-tracker-fb825.firebaseapp.com",
   projectId: "fitness-tracker-fb825",
   storageBucket: "fitness-tracker-fb825.appspot.com",

@@ -25,7 +25,7 @@ export default function CreatePage({ showLoader }) {
 
     return (
         <section className="page">
-            <h1>Create Page</h1>
+            <h1>Opret træningsplan</h1>
             <PostForm savePost={handleSubmit} />
         </section>
     );

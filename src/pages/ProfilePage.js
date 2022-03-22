@@ -6,8 +6,10 @@ import imgPlaceholder from "../assets/img/img-placeholder.jpg";
 
 export default function ProfilePage({ showLoader }) {
     const [name, setName] = useState("");
-    const [title, setTitle] = useState("");
     const [email, setEmail] = useState("");
+    const [age, setAge] = useState("");
+    const [weight, setWeight] = useState("");
+    const [height, setHeight] = useState("");
     const [image, setImage] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
     const auth = getAuth();
@@ -24,7 +26,9 @@ export default function ProfilePage({ showLoader }) {
                 if (userData) {
                     // if userData exists set states with values from userData (data from firestore)
                     setName(userData.name);
-                    setTitle(userData.title);
+                    setAge(userData.age);
+                    setWeight(userData.weight);
+                    setHeight(userData.height);
                     setImage(userData.image);
                 }
             }
@@ -38,7 +42,7 @@ export default function ProfilePage({ showLoader }) {
         event.preventDefault();
         showLoader(true);
 
-        const userToUpdate = { name: name, title: title, image: image }; // create an object to hold the user to update properties
+        const userToUpdate = { name: name, age: age, weight: weight, height: height, image: image }; // create an object to hold the user to update properties
         const docRef = doc(usersRef, auth.currentUser.uid); // create reference to the user in firestore
         await setDoc(docRef, userToUpdate); // set/update the user in firestore with the values from userToUpdate/values from input fields
         showLoader(false);
@@ -70,30 +74,38 @@ export default function ProfilePage({ showLoader }) {
 
     return (
         <section className="page">
-            <h1>Profile</h1>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Name
-                    <input type="text" value={name} onChange={e => setName(e.target.value)} name="name" placeholder="Type name" />
-                </label>
-                <label>
-                    Email
-                    <input type="email" value={email} onChange={e => setEmail(e.target.value)} name="email" placeholder="Type email" disabled />
-                </label>
-                <label>
-                    Title
-                    <input type="text" value={title} onChange={e => setTitle(e.target.value)} name="title" placeholder="Type your title" />
-                </label>
-                <label>
-                    Image
+            <h1>Profil</h1>
+            <form className="profilePage" onSubmit={handleSubmit}>
+            <label>
                     <input type="file" className="file-input" accept="image/*" onChange={handleImageChange} />
                     <img className="image-preview" src={image} alt="Choose" onError={event => (event.target.src = imgPlaceholder)} />
                 </label>
+                <label>
+                    Navn
+                    <input type="text" value={name} onChange={e => setName(e.target.value)} name="name" placeholder="Skriv navn" />
+                </label>
+                <label>
+                    Alder
+                    <input type="text" value={age} onChange={e => setAge(e.target.value)} name="age" placeholder="Skriv alder" />
+                </label>
+                <label>
+                    Vægt
+                    <input type="text" value={weight} onChange={e => setWeight(e.target.value)} name="weight" placeholder="Skriv vægt" />
+                </label>
+                <label>
+                    Højde
+                    <input type="text" value={height} onChange={e => setHeight(e.target.value)} name="Height" placeholder="Skriv højde" />
+                </label>
+                <label>
+                    Email
+                    <input type="email" value={email} onChange={e => setEmail(e.target.value)} name="email" placeholder="Skriv email" disabled />
+                </label>
+                
                 <p className="text-error">{errorMessage}</p>
-                <button>Save User</button>
+                <button>Gem</button>
             </form>
             <button className="btn-outline" onClick={handleSignOut}>
-                Sign Out
+                Logud
             </button>
         </section>
     );

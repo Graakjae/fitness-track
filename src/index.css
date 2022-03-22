@@ -174,17 +174,18 @@ form {
 form button {
     padding: 12px 15px;
     font-size: 1em;
-    width: 100%;
     max-width: 350px;
 }
 
 button {
     font-weight: 300;
+    width: 50%;
     text-align: center;
     cursor: pointer;
     border: none;
-    color: var(--text-color-light);
-    background-color: var(--green);
+    background-color: #6ECD6B;
+    color: white;
+    border-radius: 50px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     padding: 0.5em 1em;
@@ -216,17 +217,20 @@ input {
     box-sizing: border-box;
     display: block;
     background: var(--white);
-    border: solid 2px var(--green);
+    border-radius: 50px;
+    border: none;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
 }
 
 .image-preview {
     width: 100%;
-    max-width: 350px;
+    max-width: 230px;
     height: 200px;
     object-fit: cover;
     margin: 1em auto;
     display: block;
     cursor: pointer;
+    border-radius: 50%;
 }
 
 form .file-input {
@@ -292,4 +296,10 @@ article .avatar img {
     height: 50px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+/* ---------- profile  ---------- */
+
+.profilePage{
+    border-radius: 50px;
 }

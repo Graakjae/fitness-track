@@ -63,7 +63,7 @@ export default function PostForm({ savePost, post }) {
                 <input type="text" value={title} placeholder="Type a title" onChange={e => setTitle(e.target.value)} />
             </label>
             <label>
-                Body
+                Øvelser
                 <input type="text" value={body} placeholder="Type a body text" onChange={e => setBody(e.target.value)} />
             </label>
             <label>
