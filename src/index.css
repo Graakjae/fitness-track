@@ -186,6 +186,12 @@ form button {
   max-width: 350px;
 }
 
+form button a {
+  text-decoration: none;
+  font-family: Segoe UI;
+  color: white;
+}
+
 button {
   font-weight: 300;
   text-align: center;
@@ -205,11 +211,10 @@ button {
 
 button:hover {
   background-color: #6ecd6b;
-    padding: 12px 15px;
-    font-size: 1em;
-    max-width: 350px;
+  padding: 12px 15px;
+  font-size: 1em;
+  max-width: 350px;
 }
-
 
 button.btn-outline {
   background-color: var(--light-green);
@@ -239,26 +244,25 @@ input {
 }
 
 .image-preview {
-    width: 100%;
-    max-width: 230px;
-    height: 200px;
-    object-fit: cover;
-    margin: 1em auto;
-    display: block;
-    cursor: pointer;
-    border-radius: 50%;
-    margin: 1em auto;
-    width: 100%;
-    max-width: 350px;
-    padding: 1em;
-    box-sizing: border-box;
-    display: block;
-    background: var(--white);
-    border-radius: 50px;
-    border: none;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 230px;
+  height: 200px;
+  object-fit: cover;
+  margin: 1em auto;
+  display: block;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 1em auto;
+  width: 100%;
+  max-width: 350px;
+  padding: 1em;
+  box-sizing: border-box;
+  display: block;
+  background: var(--white);
+  border-radius: 50px;
+  border: none;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
 }
-
 
 form .file-input {
   display: none;
@@ -278,22 +282,22 @@ form .file-input {
 }
 
 .spinner {
-    border: 5px solid #bcc7bc;
-    border-radius: 50%;
-    border-top: 5px solid #6ECD6B;
-    width: 50px;
-    height: 50px;
-    -webkit-animation: spin 1s linear infinite;
-    /* Safari */
-    animation: spin 1s linear infinite;
-    display: inline-block;
-    vertical-align: middle;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  border: 5px solid #bcc7bc;
+  border-radius: 50%;
+  border-top: 5px solid #6ecd6b;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 1s linear infinite;
+  /* Safari */
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .hide {
@@ -327,8 +331,8 @@ article .avatar img {
 
 /* ---------- profile  ---------- */
 
-.profilePage{
-    border-radius: 50px;
+.profilePage {
+  border-radius: 50px;
 }
 
 /* ---------- øvelser  ---------- */

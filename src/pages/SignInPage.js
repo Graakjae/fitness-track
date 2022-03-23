@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
 import React from "react";
-import logo from "./logo.png";
+import profileuser from "./profile-user.png";
 
 export default function SignInPage({ showLoader }) {
   const [errorMessage, setErrorMessage] = useState("");
@@ -34,7 +34,7 @@ export default function SignInPage({ showLoader }) {
   }
   return (
     <section className="page">
-      <img src={logo} alt="Logo" />
+      <img src={profileuser} alt="Logo" />
       <h1>Fitness Tracker</h1>
       <form onSubmit={signIn}>
         <input type="email" name="mail" placeholder="Indtast din email" />
@@ -47,7 +47,7 @@ export default function SignInPage({ showLoader }) {
         <button>Log ind</button>
       </form>
       <p className="text-center">
-        Har du ikke en bruger? <Link to="/signup">Opret</Link>
+        Har du ikke en bruger? <Link to="/sign-up">Opret</Link>
       </p>
     </section>
   );
