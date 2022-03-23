@@ -91,10 +91,11 @@ a {
 nav {
     background-color: var(--green);
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     text-align: center;
+    display: flex;
 }
 
 /* Style the links inside the navigation bar */
@@ -105,8 +106,10 @@ nav a {
     padding: 20px 16px;
     text-decoration: none;
     letter-spacing: 0.1em;
-    text-transform: uppercase;
+    font-size: 0.5rem;
 }
+
+
 
 /* Change the color of links on hover */
 nav a:hover {
