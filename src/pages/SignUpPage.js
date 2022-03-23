@@ -3,6 +3,8 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
 import React from "react";
 import logo from "./logo.png";
+import { usersRef } from "../firebase-config";
+import { doc, setDoc } from "@firebase/firestore";
 
 export default function SignUpPage({ showLoader }) {
   const [errorMessage, setErrorMessage] = useState("");
@@ -27,6 +29,7 @@ export default function SignUpPage({ showLoader }) {
         // Created and signed in
         const user = userCredential.user;
         console.log(user); // for test purposes: logging the authenticated user
+        saveUserInfo();
       })
       .catch((error) => {
         let code = error.code; // saving error code in variable
@@ -35,6 +38,17 @@ export default function SignUpPage({ showLoader }) {
         code = code.replaceAll("auth/", "");
         setErrorMessage(code);
       });
+  }
+
+  async function saveUserInfo() {
+    const userToUpdate = {
+      name: name, // name fra state
+      age: age, //age fra state
+      weight: weight, //weight fra state
+      height: height, // height fra state
+    };
+    const docRef = doc(usersRef, auth.currentUser.uid);
+    await setDoc(docRef, userToUpdate);
   }
 
   return (

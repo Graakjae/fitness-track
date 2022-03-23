@@ -117,7 +117,7 @@ export default function ProfilePage({ showLoader }) {
           />
         </label>
         <label>
-          Vægt
+          Vægt i Kg
           <input
             type="text"
             value={weight}
@@ -127,7 +127,7 @@ export default function ProfilePage({ showLoader }) {
           />
         </label>
         <label>
-          Højde
+          Højde i cm
           <input
             type="text"
             value={height}
