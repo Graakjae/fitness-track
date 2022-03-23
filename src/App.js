@@ -9,6 +9,7 @@ import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import ProfilePage from "./pages/ProfilePage";
+import FremskridtPage from "./pages/FremskridtPage"
 
 function App() {
     const [showLoader, setShowLoader] = useState(true); // default value of the loader is true (loader displayed)
@@ -37,6 +38,7 @@ function App() {
                 <Route path="/create" element={<CreatePage showLoader={setShowLoader} />} />
                 <Route path="/posts/:id" element={<UpdatePage showLoader={setShowLoader} />} />
                 <Route path="/profile" element={<ProfilePage showLoader={setShowLoader} />} />
+                <Route path="/Fremskridt" element={<FremskridtPage showLoader={setShowLoader} />} />
                 <Route path="*" element={<Navigate to="/" />} />
             </Routes>
         </>
