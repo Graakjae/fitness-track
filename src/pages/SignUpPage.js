@@ -6,7 +6,10 @@ import logo from "./logo.png";
 
 export default function SignUpPage({ showLoader }) {
   const [errorMessage, setErrorMessage] = useState("");
-
+  const [name, setName] = useState("");
+  const [age, setAge] = useState("");
+  const [weight, setWeight] = useState("");
+  const [height, setHeight] = useState("");
   const auth = getAuth();
 
   useEffect(() => {
@@ -39,11 +42,43 @@ export default function SignUpPage({ showLoader }) {
       <img src={logo} alt="Logo" />
       <p>Opret dig for at lave din egen træningsplan & dele den med andre</p>
       <form onSubmit={handleSignUp}>
+        <label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            name="name"
+            placeholder="Angiv dit navn"
+          />
+        </label>
         <input type="email" name="mail" placeholder="Indtast din email" />
-        <input type="age" name="alder" placeholder="Indtast din alder" />
-        <input type="weight" name="vægt" placeholder="Indtast din vægt" />
-        <input type="height" name="højde" placeholder="Indtast din højde" />
-
+        <label>
+          <input
+            type="text"
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+            name="age"
+            placeholder="Angiv din alder"
+          />
+        </label>{" "}
+        <label>
+          <input
+            type="text"
+            value={weight}
+            onChange={(e) => setWeight(e.target.value)}
+            name="weight"
+            placeholder="Angiv vægt i Kg"
+          />
+        </label>{" "}
+        <label>
+          <input
+            type="text"
+            value={height}
+            onChange={(e) => setHeight(e.target.value)}
+            name="Height"
+            placeholder="Angiv højde"
+          />
+        </label>
         <input
           type="password"
           name="password"
