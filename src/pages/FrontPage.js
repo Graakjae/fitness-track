@@ -34,21 +34,19 @@ export default function SignInPage({ showLoader }) {
   }
   return (
     <section className="page">
-      <img src={logo} alt="Logo" />
-      <h1>Fitness Tracker</h1>
-      <form onSubmit={signIn}>
-        <input type="email" name="mail" placeholder="Indtast din email" />
-        <input
-          type="password"
-          name="password"
-          placeholder="Indtast dit kodeord"
-        />
-        <p className="text-error">{errorMessage}</p>
-        <button>Log ind</button>
-      </form>
-      <p className="text-center">
-        Har du ikke en bruger? <Link to="/signup">Opret</Link>
-      </p>
+      <main>
+        <h1>Fitness Tracker</h1>
+        <img src={logo} alt="Logo" />
+        <form onSubmit={signIn}>
+          <button>
+            <Link to="/sign-up">Opret</Link>
+          </button>
+          <button>
+            <Link to="/sign-in">Log ind</Link>
+          </button>
+        </form>
+        <p className="text-center">Har du glemt dit kodeord?</p>
+      </main>
     </section>
   );
 }
