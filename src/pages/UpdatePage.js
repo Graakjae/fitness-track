@@ -34,7 +34,7 @@ export default function UpdatePage({ showLoader }) {
     }
 
     async function deletePost() {
-        const confirmDelete = window.confirm(`Do you want to delete post, ${post.title}?`); // show confirm delete dialog
+        const confirmDelete = window.confirm(`Er du sikker på du vil slett denne plan?, ${post.title}?`); // show confirm delete dialog
         if (confirmDelete) {
             // if user click "OK" then delete post
             showLoader(true);
@@ -46,7 +46,7 @@ export default function UpdatePage({ showLoader }) {
 
     return (
         <section className="page">
-            <h1>Update Page</h1>
+            <h1>Opdater plan</h1>
             <PostForm savePost={handleSubmit} post={post} />
             <button className="btn-outline" onClick={deletePost}>
                 Delete Post
