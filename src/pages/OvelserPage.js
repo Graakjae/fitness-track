@@ -16,12 +16,11 @@ export default function OvelserPage() {
 
     return (
         <section className="page">
-            <h1>Users</h1>
-            <section className="grid-container">
+            <h1>Øvelser</h1>
+            <section>
                 {ovelser.map(ovelser => (
-                    <article>
+                    <article className="ovelser">
                         <h3>{ovelser.name}</h3>
-                        <p>{ovelser.id}</p>
                     </article>
                 ))}
             </section>

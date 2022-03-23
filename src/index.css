@@ -28,7 +28,6 @@ code {
 main {
   background-color: var(--light-green);
   margin: auto;
-  text-align: center;
   background-color: var(--white);
   max-width: 380px;
   animation: fadeIn 0.5s;
@@ -330,4 +329,18 @@ article .avatar img {
 
 .profilePage{
     border-radius: 50px;
+}
+
+/* ---------- øvelser  ---------- */
+
+.ovelser{
+  margin: 1em auto;
+  width: 80%;
+  box-sizing: border-box;
+  display: block;
+  border: solid 1px #c1c1c1;
+  border-radius: 15px;
+  padding-left: 10px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+
 }

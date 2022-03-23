@@ -9,7 +9,7 @@ export default function Nav() {
     return (
         <nav>
             <NavLink to="/create"><img src= {navdumbell} alt="nav icon" ></img><p>Min træning</p></NavLink>
-            <NavLink to="/øvelser"><img src= {navexercises} alt="nav icon" ></img><p>Øvelser</p></NavLink>
+            <NavLink to="/ovelser"><img src= {navexercises} alt="nav icon" ></img><p>Øvelser</p></NavLink>
             <NavLink to="/posts"><img src= {navworkoutplan} alt="nav icon" ></img><p>Træningsplaner</p></NavLink>
             <NavLink to="/fremskridt"><img src= {navprogression} alt="nav icon" ></img><p>Fremskridt</p></NavLink>
             <NavLink to="/profile"><img src= {navprofil} alt="nav icon" ></img><p>Profil</p></NavLink>

@@ -11,6 +11,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import ProfilePage from "./pages/ProfilePage";
 import FremskridtPage from "./pages/FremskridtPage"
 import FrontPage from "./pages/FrontPage";
+import OvelserPage from "./pages/OvelserPage";
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
                 <Route path="/posts/:id" element={<UpdatePage showLoader={setShowLoader} />} />
                 <Route path="/profile" element={<ProfilePage showLoader={setShowLoader} />} />
                 <Route path="/Fremskridt" element={<FremskridtPage showLoader={setShowLoader} />} />
+                <Route path="/ovelser" element={<OvelserPage showLoader={setShowLoader} />} />
                 <Route path="*" element={<Navigate to="/" />} />
             </Routes>
         </>
