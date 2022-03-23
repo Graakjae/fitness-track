@@ -17,6 +17,8 @@ export default function PostForm({ savePost, post }) {
         }
     }, [post]); // useEffect is called every time post changes.
 
+    
+     
     /**
      * handleImageChange is called every time the user chooses an image in the fire system.
      * The event is fired by the input file field in the form
@@ -63,6 +65,10 @@ export default function PostForm({ savePost, post }) {
                 <input type="text" value={title} placeholder="Type a title" onChange={e => setTitle(e.target.value)} />
             </label>
             <label>
+                Søg
+                <input type="search" placeholder="Search" onkeyup="search(this.value)"/>
+            </label>
+            <label>
                 Øvelser
                 <input type="text" value={body} placeholder="Type a body text" onChange={e => setBody(e.target.value)} />
             </label>
@@ -72,7 +78,7 @@ export default function PostForm({ savePost, post }) {
                 <img className="image-preview" src={image} alt="Choose" onError={event => (event.target.src = imgPlaceholder)} />
             </label>
             <p className="text-error">{errorMessage}</p>
-            <button type="submit">Save</button>
+            <button type="submit">Opret</button>
         </form>
     );
 }
