@@ -10,7 +10,7 @@ export default function OvelserPage() {
 
     useEffect(() => {
         async function getOvelser() {
-        const url = "https://api.jsonbin.io/b/623af66406182767437ddcdf";
+        const url = "https://api.jsonbin.io/b/623af66406182767437ddcdf/1";
         const response = await fetch(url);
         const data = await response.json();
         setOvelser(data);
