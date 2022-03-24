@@ -220,6 +220,7 @@ button.btn-outline {
   background-color: var(--light-green);
   color: var(--green);
   border: solid 2px var(--green);
+  margin-bottom: 100px;
 }
 
 .btn-sign-out {
