@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
-
+import Filter from "../components/Filter";
 
 export default function OvelserPage() {
 
-    
-    
     const [ovelser, setOvelser] = useState([]);
     const [searchValue, setSearchValue] = useState("");
     const filteredOvelser = ovelser.filter(ovelser => ovelser.name.toLowerCase().includes(searchValue));
@@ -24,6 +22,7 @@ export default function OvelserPage() {
         <section className="page">
             <h1>Øvelser</h1>
             <SearchBar setValue={setSearchValue} />
+            <Filter setValue={setSearchValue}/>
             <section>
                 {filteredOvelser.map(ovelser => (
                     <article className="ovelser">
