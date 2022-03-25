@@ -38,7 +38,7 @@ export default function OvelserPage({ showLoader }) {
             <SearchBar setValue={setSearchValue} />
             <Filter handleFilters={filterOvelser}/>
             <section>
-                {filteredOvelser2.map(ovelser => (
+                {filteredOvelser.map(ovelser => (
                     <article className="ovelser">
                         <h3>{ovelser.name}</h3>
                     </article>
