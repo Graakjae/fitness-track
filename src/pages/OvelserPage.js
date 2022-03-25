@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
 import Filter from "../components/Filter";
 
-export default function OvelserPage() {
+export default function OvelserPage({ showLoader }) {
 
     const [ovelser, setOvelser] = useState([]);
     const [searchValue, setSearchValue] = useState("");
-    const filteredOvelser = ovelser.filter(ovelser => ovelser.name.toLowerCase().includes(searchValue));
+    const [filteredOvelser, setFilteredOvelser] = useState("");
+    const filteredOvelser2 = ovelser.filter(ovelser => ovelser.name.toLowerCase().includes(searchValue));
 
     useEffect(() => {
         async function getOvelser() {
@@ -14,17 +15,30 @@ export default function OvelserPage() {
         const response = await fetch(url);
         const data = await response.json();
         setOvelser(data);
+        setFilteredOvelser(data);
+        showLoader(false);
         }
         getOvelser();
-    }, []);
+    }, [showLoader]);
+
+    function filterOvelser(filters) {
+        console.log(filters);
+        if (filters.length) {
+            const filteredData = ovelser.filter(ovelser => filters.includes(ovelser.muskel));
+            setFilteredOvelser(filteredData);
+        } else {
+            setFilteredOvelser(ovelser);
+        }
+    }
+
 
     return (
         <section className="page">
             <h1>Øvelser</h1>
             <SearchBar setValue={setSearchValue} />
-            <Filter setValue={setSearchValue}/>
+            <Filter handleFilters={filterOvelser}/>
             <section>
-                {filteredOvelser.map(ovelser => (
+                {filteredOvelser2.map(ovelser => (
                     <article className="ovelser">
                         <h3>{ovelser.name}</h3>
                     </article>

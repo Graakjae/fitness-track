@@ -1,23 +1,37 @@
 
-export default function filter() {
-    const [ovelser, setOvelser] = useState([]);
-    
-    function filterById(id) {
-        let filteredOvelser = [];
-          if (ovelser.id.includes(id)) {
-            filteredOvelser.push(ovelser);
-          }
+export default function Filter( { handleFilters }) {
+    function handleChange(event){
+        const checkboxes = event.target.form.elements;
+        const selectedCheckboxes = [];
+
+        for (const checkbox of checkboxes) {
+            if (checkbox.checked) {
+                selectedCheckboxes.push(checkbox.value);
+            }
         }
+
+        handleFilters(selectedCheckboxes);
+    }
     
   
   return (
-    <article>
-        <input type="checkbox" onclick="reset()" onChange={filterById} >Reset</input>
-        <input type="checkbox" onclick="filterById('0')" onChange={filterById} >0</input >
-        <input type="checkbox" onclick="filterById('1')" onChange={filterById} >1</input>
-        <input type="checkbox" onclick="filterByid('2')" onChange={filterById}>2</input>
-        <input type="checkbox" onclick="filterByid('3')" onChange={filterById}>3</input>
-        <input type="checkbox" onclick="filterByid('4')" onChange={filterById}>4</input>    
-    </article>
-);
+    <form onChange={handleChange}>
+        <label>
+            Bryst
+            <input type="checkbox" value="Bryst" />
+        </label>
+        <label>
+            Ben
+            <input type="checkbox" value="Ben" />
+        </label>
+        <label>
+            Mave
+            <input type="checkbox" value="Mave" />
+        </label>
+        <label>
+            Triceps
+            <input type="checkbox" value="Triceps" />
+        </label>
+    </form>
+    );
 }
