@@ -9,7 +9,7 @@ export default function OvelserPage({ showLoader }) {
 
     useEffect(() => {
         async function getOvelser() {
-        const url = "https://api.jsonbin.io/b/623af66406182767437ddcdf/1";
+        const url = "https://api.jsonbin.io/b/623af66406182767437ddcdf/3";
         const response = await fetch(url);
         const data = await response.json();
         setOvelser(data);
@@ -36,7 +36,7 @@ export default function OvelserPage({ showLoader }) {
     }
 
     return (
-        <section className="page">
+        <section className="OvelsePage">
             <h1>Øvelser</h1>
             <SearchBar setValue={handleSearch} />
             <Filter handleFilters={filterOvelser}/>

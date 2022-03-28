@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import imgPlaceholder from "../assets/img/img-placeholder.jpg";
 
 export default function PostForm({ savePost, post }) {
 
@@ -93,7 +94,7 @@ export default function PostForm({ savePost, post }) {
           className="image-preview"
           src={image}
           alt="Choose"
-         // onError={(event) => (event.target.src = imgPlaceholder)}
+          onError={(event) => (event.target.src = imgPlaceholder)}
         />
       </label>
       <p className="text-error">{errorMessage}</p>

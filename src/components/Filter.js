@@ -15,22 +15,38 @@ export default function Filter( { handleFilters }) {
     
   
   return (
-    <form onChange={handleChange}>
-        <label>
-            Bryst
-            <input type="checkbox" value="Bryst" />
-        </label>
+    <form onChange={handleChange} className="filter-container">
         <label>
             Ben
             <input type="checkbox" value="Ben" />
+        </label>
+        <label>
+            Biceps
+            <input type="checkbox" value="Biceps" />
+        </label>
+        <label className="checkbox">
+            Bryst
+            <input type="checkbox" value="Bryst" />
         </label>
         <label>
             Mave
             <input type="checkbox" value="Mave" />
         </label>
         <label>
+            Ryg
+            <input type="checkbox" value="Ryg" />
+        </label>
+        <label>
+            Skulder
+            <input type="checkbox" value="Skulder" />
+        </label>
+        <label>
             Triceps
             <input type="checkbox" value="Triceps" />
+        </label>
+        <label>
+            Underarm
+            <input type="checkbox" value="Underarm" />
         </label>
     </form>
     );

@@ -22,6 +22,7 @@ export default function HomePage({ showLoader }) {
     return (
         <section className="page">
             <section className="grid-container">
+                <h1>Træningsplaner</h1>
                 {posts.map(post => (
                     <PostCard post={post} key={post.id} />
                 ))}
