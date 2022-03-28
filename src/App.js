@@ -40,7 +40,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<PostsPage showLoader={setShowLoader} />} />
                 <Route path="/create" element={<CreatePage showLoader={setShowLoader} />} />
-                <Route path="/posts/:id" element={<UpdatePage showLoader={setShowLoader} />} />
+                <Route path="/plan/:id" element={<UpdatePage showLoader={setShowLoader} />} />
                 <Route path="/profile" element={<ProfilePage showLoader={setShowLoader} />} />
                 <Route path="/Fremskridt" element={<FremskridtPage showLoader={setShowLoader} />} />
                 <Route path="/ovelser" element={<OvelserPage showLoader={setShowLoader} />} />

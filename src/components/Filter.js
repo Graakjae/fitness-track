@@ -18,35 +18,35 @@ export default function Filter( { handleFilters }) {
     <form onChange={handleChange} className="filter-container">
         <label>
             Ben
-            <input type="checkbox" value="Ben" />
+            <input className="checkbox" type="checkbox" value="Ben" />
         </label>
         <label>
             Biceps
-            <input type="checkbox" value="Biceps" />
+            <input className="checkbox" type="checkbox" value="Biceps" />
         </label>
-        <label className="checkbox">
+        <label>
             Bryst
-            <input type="checkbox" value="Bryst" />
+            <input className="checkbox" type="checkbox" value="Bryst" />
         </label>
         <label>
             Mave
-            <input type="checkbox" value="Mave" />
+            <input className="checkbox" type="checkbox" value="Mave" />
         </label>
         <label>
             Ryg
-            <input type="checkbox" value="Ryg" />
+            <input className="checkbox" type="checkbox" value="Ryg" />
         </label>
         <label>
             Skulder
-            <input type="checkbox" value="Skulder" />
+            <input className="checkbox" type="checkbox" value="Skulder" />
         </label>
         <label>
             Triceps
-            <input type="checkbox" value="Triceps" />
+            <input className="checkbox" type="checkbox" value="Triceps" />
         </label>
         <label>
             Underarm
-            <input type="checkbox" value="Underarm" />
+            <input className="checkbox" type="checkbox" value="Underarm" />
         </label>
     </form>
     );
