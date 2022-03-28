@@ -5,6 +5,9 @@ import Album from "../assets/img/album.PNG";
 
 export default function FremskridtPage( {showLoader} ) {
 
+    showLoader(false);
+
+
     return (
         <section className="page">
         <h1>Dine fremskridt</h1>
@@ -13,7 +16,7 @@ export default function FremskridtPage( {showLoader} ) {
         <h3>Kalender</h3>
         <img src= {Kalender} alt="kalender" ></img>
         <h3>Album</h3>
-        <img src= {Album} alt="album" ></img>
+        <img className="album" src= {Album} alt="album" ></img>
         </section>
     )
 
