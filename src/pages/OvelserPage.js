@@ -5,9 +5,7 @@ import Filter from "../components/Filter";
 export default function OvelserPage({ showLoader }) {
 
     const [ovelser, setOvelser] = useState([]);
-    const [searchValue, setSearchValue] = useState("");
     const [filteredOvelser, setFilteredOvelser] = useState("");
-    const filteredOvelser2 = ovelser.filter(ovelser => ovelser.name.toLowerCase().includes(searchValue));
 
     useEffect(() => {
         async function getOvelser() {
@@ -31,14 +29,19 @@ export default function OvelserPage({ showLoader }) {
         }
     }
 
+    function handleSearch(val) {
+        console.log(val);
+        const filteredData = filteredOvelser.filter(ovelser => ovelser.name.toLowerCase().includes(val));
+        setFilteredOvelser(filteredData);
+    }
 
     return (
         <section className="page">
             <h1>Øvelser</h1>
-            <SearchBar setValue={setSearchValue} />
+            <SearchBar setValue={handleSearch} />
             <Filter handleFilters={filterOvelser}/>
             <section>
-                {filteredOvelser.map(ovelser => (
+                {filteredOvelser.map (ovelser => (
                     <article className="ovelser">
                         <h3>{ovelser.name}</h3>
                     </article>
