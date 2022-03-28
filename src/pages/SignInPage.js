@@ -46,7 +46,7 @@ export default function SignInPage({ showLoader }) {
         <p className="text-error">{errorMessage}</p>
         <button>Log ind</button>
       </form>
-      <p className="text-center">
+      <p className="text-center1">
         Har du ikke en bruger? <Link to="/sign-up">Opret</Link>
       </p>
     </section>
