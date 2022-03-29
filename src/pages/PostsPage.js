@@ -26,7 +26,7 @@ export default function HomePage({ post, showLoader }) {
      * handleClick is called when user clicks on the Article (PostCard)
      */
     function handleClick() {
-        navigate(`/create`);
+        navigate(`/ny-plan`);
     }
 
     return (

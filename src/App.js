@@ -12,7 +12,7 @@ import ProfilePage from "./pages/ProfilePage";
 import FremskridtPage from "./pages/FremskridtPage"
 import FrontPage from "./pages/FrontPage";
 import OvelserPage from "./pages/OvelserPage";
-
+import NyPlanPage from "./pages/NyPlanPage";
 
 function App() {
   const [showLoader, setShowLoader] = useState(true); // default value of the loader is true (loader displayed)
@@ -44,6 +44,7 @@ function App() {
                 <Route path="/profile" element={<ProfilePage showLoader={setShowLoader} />} />
                 <Route path="/Fremskridt" element={<FremskridtPage showLoader={setShowLoader} />} />
                 <Route path="/ovelser" element={<OvelserPage showLoader={setShowLoader} />} />
+                <Route path="/ny-plan" element={<NyPlanPage showLoader={setShowLoader} />} />
                 <Route path="*" element={<Navigate to="/" />} />
             </Routes>
         </>
