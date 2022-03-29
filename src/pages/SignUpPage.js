@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
 import React from "react";
-import logo from "./logo.png";
+import logo from "../assets/img/logo.png";
 import { usersRef } from "../firebase-config";
 import { doc, setDoc } from "@firebase/firestore";
 
