@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { onSnapshot, query, orderBy } from "firebase/firestore";
-import { postsRef } from "../firebase-config";
+import { favsRef } from "../firebase-config";
 import PostCard from "../components/PostCard";
 import { useNavigate } from "react-router-dom";
 
@@ -8,7 +8,7 @@ export default function HomePage({ post, showLoader }) {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        const q = query(postsRef, orderBy("createdAt", "desc")); // order by: lastest post first
+        const q = query(favsRef, orderBy("createdAt", "desc")); // order by: lastest post first
         const unsubscribe = onSnapshot(q, data => {
         const postsData = data.docs.map(doc => {
                 // map through all docs (object) from post collection

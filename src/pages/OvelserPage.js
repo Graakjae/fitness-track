@@ -5,7 +5,7 @@ import Filter from "../components/Filter";
 export default function OvelserPage({ showLoader }) {
 
     const [ovelser, setOvelser] = useState([]);
-    const [filteredOvelser, setFilteredOvelser] = useState("");
+    const [filteredOvelser, setFilteredOvelser] = useState([]);
 
     useEffect(() => {
         async function getOvelser() {

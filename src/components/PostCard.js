@@ -13,8 +13,8 @@ export default function PostCard({ post }) {
 
     return (
         <article onClick={handleClick}>
-            <h2>{post.title}</h2>
-            <p>{post.body}</p>
+            <h2>{post.name}</h2>
+            <p>{post.id}</p>
             <img src={post.image} alt={post.title} />
             <UserAvatar uid={post.uid} />
         </article>
