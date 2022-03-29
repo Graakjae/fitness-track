@@ -8,15 +8,15 @@ export default function PostCard({ post }) {
      * handleClick is called when user clicks on the Article (PostCard)
      */
     function handleClick() {
-        navigate(`posts/${post.id}`);
+        navigate(`plan/${post.id}`);
     }
 
     return (
         <article onClick={handleClick}>
-            <UserAvatar uid={post.uid} />
+            <h2>{post.name}</h2>
+            <p>{post.id}</p>
             <img src={post.image} alt={post.title} />
-            <h2>{post.title}</h2>
-            <p>{post.body}</p>
+            <UserAvatar uid={post.uid} />
         </article>
     );
 }

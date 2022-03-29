@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import imgPlaceholder from "../assets/img/img-placeholder.jpg";
 
 export default function PostForm({ savePost, post }) {
+
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [image, setImage] = useState("");
