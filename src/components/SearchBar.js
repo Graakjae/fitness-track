@@ -1,7 +1,6 @@
 export default function SearchBar({ setValue }) {
-  /**
-   * handleClick is called when user clicks on the Article (PostCard)
-   */
+
+  
 
   function handleSearch(event) {
     setValue(event.target.value.toLowerCase());

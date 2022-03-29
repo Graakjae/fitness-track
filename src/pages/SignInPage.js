@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
 import React from "react";
-import profileuser from "./profile-user.png";
+import profileuser from "../assets/img/profile-user.png";
 
 export default function SignInPage({ showLoader }) {
   const [errorMessage, setErrorMessage] = useState("");
