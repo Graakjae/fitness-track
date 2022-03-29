@@ -34,7 +34,7 @@ export default function SignInPage({ showLoader }) {
   }
   return (
     <section className="page">
-      <img src={profileuser} alt="Logo" />
+      <img className="login-icon" src={profileuser} alt="Logo" />
       <h1>Fitness Tracker</h1>
       <form onSubmit={signIn}>
         <input type="email" name="mail" placeholder="Indtast din email" />
@@ -46,7 +46,7 @@ export default function SignInPage({ showLoader }) {
         <p className="text-error">{errorMessage}</p>
         <button>Log ind</button>
       </form>
-      <p className="text-center">
+      <p className="text-center1">
         Har du ikke en bruger? <Link to="/sign-up">Opret</Link>
       </p>
     </section>

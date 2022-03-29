@@ -36,7 +36,7 @@ export default function SignInPage({ showLoader }) {
     <section className="page">
       <main>
         <h1>Fitness Tracker</h1>
-        <img src={logo} alt="Logo" />
+        <img className="logo" src={logo} alt="Logo" />
         <form onSubmit={signIn}>
           <button>
             <Link to="/sign-up">Opret</Link>
