@@ -15,7 +15,7 @@ export default function PostCard({ post }) {
         <article onClick={handleClick}>
             <h2>{post.name}</h2>
             <p>{post.id}</p>
-            <img src={post.image} alt={post.title} />
+            <p>{post.muskel}</p>
             <UserAvatar uid={post.uid} />
         </article>
     );
