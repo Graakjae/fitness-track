@@ -25,9 +25,8 @@ export default function UserAvatar({ uid }) {
 
     return (
         <div className="avatar">
-            <img src={user.image} alt={user.id} />
             <span>
-                <h3>{user.name}</h3>
+                <p>Lavet af {user.name}</p>
             </span>
         </div>
     );
