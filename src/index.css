@@ -376,3 +376,20 @@ input.checkbox {
 }
 
 /* ---------- opret træningsplan  ---------- */
+
+
+/* ---------- fremskridt  ---------- */
+
+.page img {
+  max-width: 300px;
+  padding-bottom: 40px;
+}
+
+.page img:last-child{
+  padding-bottom: 100px;
+}
+
+.page h3 {
+  text-align: left;
+  margin-left: 7%;
+}
