@@ -65,8 +65,7 @@ export default function NewFavList({ showLoader }) {
                         {selectedPosts.length === 0 && <p>No posts added yet</p>}
                         {selectedPosts.map(post => (
                             <article key={post.id}>
-                                {post.name} (Rating: {post.rating} - Reads: {post.reads})
-                                <a href onClick={() => handleRemove(post.id)}>X</a>
+                                {post.name} (Rating: {post.rating} - Reads: {post.reads})<a onClick={() => handleRemove(post.id)}>X</a>
                             </article>
                         ))}
                     </section>

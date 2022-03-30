@@ -2,7 +2,7 @@ import { Routes, Navigate, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import PostsPage from "./pages/PostsPage";
 import CreatePage from "./pages/CreatePage";
-import UpdatePage from "./pages/UpdatePage";
+import PlanPage from "./pages/PlanPage";
 import Loader from "./components/Loader";
 import { useState } from "react";
 import SignInPage from "./pages/SignInPage";
@@ -40,7 +40,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<PostsPage showLoader={setShowLoader} />} />
                 <Route path="/create" element={<CreatePage showLoader={setShowLoader} />} />
-                <Route path="/plan/:id" element={<UpdatePage showLoader={setShowLoader} />} />
+                <Route path="/plan/:id" element={<PlanPage showLoader={setShowLoader} />} />
                 <Route path="/profile" element={<ProfilePage showLoader={setShowLoader} />} />
                 <Route path="/Fremskridt" element={<FremskridtPage showLoader={setShowLoader} />} />
                 <Route path="/ovelser" element={<OvelserPage showLoader={setShowLoader} />} />

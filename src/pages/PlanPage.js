@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import PostForm from "../components/PostForm";
 import { favsRef } from "../firebase-config";
 
-export default function UpdatePage({ showLoader }) {
+export default function UpdatePage({ selectedPosts, showLoader }) {
     const params = useParams(); // url parameter
     const postId = params.id; // get post id from url parameter
     const [post, setPost] = useState({});
@@ -46,8 +46,9 @@ export default function UpdatePage({ showLoader }) {
 
     return (
         <section className="page">
-            <h1>Opdater plan</h1>
+            
             <PostForm savePost={handleSubmit} post={post} />
+            
             <button className="button-delete" onClick={deletePost}>
                 Slet træningsplan
             </button>
