@@ -34,7 +34,7 @@ export default function SignInPage({ showLoader }) {
   }
   return (
     <section className="page">
-      <img className="login-icon" src={profileuser} alt="Logo" />
+      <img className="logo" src={profileuser} alt="Logo" />
       <h1>Fitness Tracker</h1>
       <form onSubmit={signIn}>
         <input type="email" name="mail" placeholder="Indtast din email" />

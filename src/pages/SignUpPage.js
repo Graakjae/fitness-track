@@ -54,7 +54,9 @@ export default function SignUpPage({ showLoader }) {
   return (
     <section className="page">
       <img className="logo" src={logo} alt="Logo" />
-      <p>Opret dig for at lave din egen træningsplan & dele den med andre</p>
+      <p className="lille-tekst">
+        Opret dig for at lave din egen træningsplan & dele den med andre
+      </p>
       <form onSubmit={handleSignUp}>
         <label>
           <input

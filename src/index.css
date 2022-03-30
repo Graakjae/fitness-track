@@ -336,20 +336,22 @@ article .avatar img {
 
 /*----------- Logo ---------*/
 .logo {
-  margin-left: 90px;
-}
-
-/*------------ Login-icon ----------*/
-
-.login-icon {
-  margin-left: 120px;
-  width: 100px;
+  margin: auto;
+  display: block;
+  align-items: center;
 }
 
 /* ---------- Profile  ---------- */
 
 .profilePage {
   border-radius: 50px;
+}
+
+/*------- sign up page -----*/
+.lille-tekst {
+  margin: auto;
+  text-align: center;
+  justify-content: center;
 }
 
 /* ---------- Øvelser  ---------- */
