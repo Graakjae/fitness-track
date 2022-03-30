@@ -35,11 +35,11 @@ export default function UpdatePage({ showLoader }) {
     return (
         <section className="page">
             <h1>{post.name}</h1>
-            {post.posts.map(øvelse => (
-                <article>
+            {post.posts?.map(øvelse => (
+                <article className="ovelser">
                     <h2>{øvelse.name}</h2>
                     <p>
-                        {øvelse.muskel}, {øvelse.rating}, {øvelse.reads}
+                       Set: {øvelse.rating} Reps: {øvelse.reads}
                     </p>
                 </article>
             ))}

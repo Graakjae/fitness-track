@@ -8,8 +8,8 @@ export default function NewFavList({ showLoader }) {
     const [selectedPosts, setSelectedPosts] = useState([]);
     const [selectedPost, setSelectedPost] = useState({});
     const [name, setName] = useState("");
-    const [rating, setRating] = useState(0);
-    const [reads, setReads] = useState(0);
+    const [Set, setSet] = useState(0);
+    const [Reps, setReps] = useState(0);
 
     const navigate = useNavigate();
 
@@ -39,9 +39,9 @@ export default function NewFavList({ showLoader }) {
 
     function handleAddPost() {
         const post = posts.find(post => post.id == selectedPost);
-        console.log(rating, reads, post);
-        post.rating = rating;
-        post.reads = reads;
+        console.log(Set, Reps, post);
+        post.Set = Set;
+        post.Reps = Reps;
         setSelectedPosts(prevSelectedPosts => [...prevSelectedPosts, post]);
     }
 
@@ -60,19 +60,18 @@ export default function NewFavList({ showLoader }) {
                     <input type="text" placeholder="Navngiv plan" onChange={e => setName(e.target.value)} />
                 </label>
                 <label>
-                    Posts
                     <section className="selected-posts">
-                        {selectedPosts.length === 0 && <p>No posts added yet</p>}
+                        {selectedPosts.length === 0 && <p>Ingen øvelser er tilføjet endnu</p>}
                         {selectedPosts.map(post => (
-                            <article key={post.id}>
-                                {post.name} (Rating: {post.rating} - Reads: {post.reads})<a onClick={() => handleRemove(post.id)}>X</a>
+                            <article class="ovelser2" key={post.id}>
+                                {post.name} Set: {post.Set} - Reps: {post.Reps}<a className="right" onClick={() => handleRemove(post.id)}>X</a>
                             </article>
                         ))}
                     </section>
                 </label>
                 <section className="add-posts">
                     <label>
-                        Vælg øvelse
+                        Vælg øvelser
                         <select value={selectedPost} onChange={e => setSelectedPost(e.target.value)}>
                             <option>Øvelser</option>
                             {posts.map(post => (
@@ -82,9 +81,9 @@ export default function NewFavList({ showLoader }) {
                             ))}
                         </select>
                     </label>
-                    <input type="number" placeholder="Sets" onChange={e => setRating(e.target.value)} />
+                    <input type="number" placeholder="Set" onChange={e => setSet(e.target.value)} />
 
-                    <input type="number" placeholder="Reps" onChange={e => setReads(e.target.value)} />
+                    <input type="number" placeholder="Reps" onChange={e => setReps(e.target.value)} />
 
                     <button type="button" onClick={handleAddPost}>
                         Tilføj øvelse

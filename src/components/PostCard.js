@@ -9,7 +9,7 @@ export default function PostCard({ post }) {
 
     return (
         <article onClick={handleClick}>
-            <h2>{post.name}</h2>
+            <h2 className="pad">{post.name}</h2>
         </article>
     );
 }

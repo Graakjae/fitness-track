@@ -36,22 +36,7 @@ export default function HomePage({ post, showLoader }) {
                 {posts.map(post => (
                     <PostCard post={post} key={post.id} />
                 ))}
-                <button className="button" 
                 
-                >
-                Se alle
-            </button>
-            </section>
-            <section className="grid-container">
-                <h1>Udforsk træningsplaner</h1>
-                {posts.map(post => (
-                    <PostCard post={post} key={post.id} />
-                ))}
-                <button className="button" 
-                
-                >
-                Se alle
-            </button>
             </section>
 
         </section>
