@@ -34,7 +34,7 @@ a {
 
 .page {
   min-height: calc(100vh - 58px - 2em);
-  padding: 1em;
+  padding: 5em;
 }
 
 .text-center {
@@ -189,7 +189,6 @@ button:hover {
   max-width: 350px;
 }
 
-
 button.button {
   background-color: #6ecd6b;
   color: white;
@@ -239,7 +238,6 @@ button.button-logud {
   margin-bottom: 100px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 }
-
 
 input {
   margin: 1em auto;
@@ -407,7 +405,7 @@ input.checkbox {
   margin-right: auto;
 }
 
-.fremskridt img:last-child{
+.fremskridt img:last-child {
   padding-bottom: 100px;
 }
 
