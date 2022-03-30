@@ -178,6 +178,10 @@ button {
   font-family: "Lato", sans-serif;
 }
 
+.btn-outline {
+  margin-bottom: 100px !important;
+}
+
 button:hover {
   background-color: #6ecd6b;
   padding: 12px 15px;
@@ -323,7 +327,6 @@ form .file-input {
   margin: 0;
 }
 
-
 article .avatar img {
   max-width: 50px;
   height: 50px;
@@ -342,7 +345,6 @@ article .avatar img {
   margin-left: 120px;
   width: 100px;
 }
-
 
 /* ---------- Profile  ---------- */
 
@@ -377,7 +379,6 @@ input.checkbox {
 
 /* ---------- opret træningsplan  ---------- */
 
-
 /* ---------- fremskridt  ---------- */
 
 .page img {
@@ -385,7 +386,7 @@ input.checkbox {
   padding-bottom: 40px;
 }
 
-.page img:last-child{
+.page img:last-child {
   padding-bottom: 100px;
 }
 
