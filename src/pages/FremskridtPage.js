@@ -9,7 +9,7 @@ export default function FremskridtPage( {showLoader} ) {
 
 
     return (
-        <section className="page">
+        <section className="fremskridt">
         <h1>Dine fremskridt</h1>
         <h3>Din udvikling</h3>
         <img src= {Udvikling} alt="udvikling graf" ></img>
