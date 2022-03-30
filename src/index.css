@@ -256,22 +256,13 @@ input {
 
 .image-preview {
   width: 100%;
-  max-width: 230px;
+  max-width: 350px;
   height: 200px;
   object-fit: cover;
   margin: 1em auto;
   display: block;
   cursor: pointer;
-  border-radius: 50%;
-  margin: 1em auto;
-  width: 100%;
-  max-width: 350px;
-  padding: 1em;
-  box-sizing: border-box;
-  display: block;
-  background: var(--white);
-  border-radius: 50px;
-  border: none;
+  border-radius: 20px;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
 }
 
@@ -382,21 +373,6 @@ input.checkbox {
 
 /* ---------- opret træningsplan  ---------- */
 
-/* ---------- fremskridt  ---------- */
-
-.page img {
-  max-width: 300px;
-  padding-bottom: 40px;
-}
-
-.page img:last-child {
-  padding-bottom: 100px;
-}
-
-.page h3 {
-  text-align: left;
-  margin-left: 7%;
-}
 
 /* ---------- fremskridt  ---------- */
 
