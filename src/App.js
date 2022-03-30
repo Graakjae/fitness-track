@@ -1,7 +1,6 @@
 import { Routes, Navigate, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import PostsPage from "./pages/PostsPage";
-import CreatePage from "./pages/CreatePage";
 import PlanPage from "./pages/PlanPage";
 import Loader from "./components/Loader";
 import { useState } from "react";
@@ -39,7 +38,6 @@ function App() {
             <Nav />
             <Routes>
                 <Route path="/" element={<PostsPage showLoader={setShowLoader} />} />
-                <Route path="/create" element={<CreatePage showLoader={setShowLoader} />} />
                 <Route path="/plan/:id" element={<PlanPage showLoader={setShowLoader} />} />
                 <Route path="/profile" element={<ProfilePage showLoader={setShowLoader} />} />
                 <Route path="/Fremskridt" element={<FremskridtPage showLoader={setShowLoader} />} />

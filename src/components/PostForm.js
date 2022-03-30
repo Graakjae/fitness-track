@@ -12,15 +12,14 @@ export default function PostForm({ post }) {
 
   useEffect(() => {
     if (post) {
-      // if post, set the states with values from the post object.
-      // The post object is a prop, passed from UpdatePage
+      
       setName(post.name);
       setPosts(post.posts);
       setRating(post.rating);
       setReads(post.reads);
 
     }
-  }, [post]); // useEffect is called every time post changes.
+  }, [post]); 
 
 
   return (

@@ -20,21 +20,20 @@ export default function SignUpPage({ showLoader }) {
 
   function handleSignUp(event) {
     event.preventDefault();
-    const mail = event.target.mail.value; // mail value from inout field in sign in form
-    const password = event.target.password.value; // password value from inout field in sign in form
+    const mail = event.target.mail.value; 
+    const password = event.target.password.value; 
 
-    // read the docs: https://firebase.google.com/docs/auth/web/password-auth#create_a_password-based_account
     createUserWithEmailAndPassword(auth, mail, password)
       .then((userCredential) => {
-        // Created and signed in
+       
         const user = userCredential.user;
-        console.log(user); // for test purposes: logging the authenticated user
+        console.log(user); 
         saveUserInfo();
       })
       .catch((error) => {
-        let code = error.code; // saving error code in variable
+        let code = error.code; 
         console.log(code);
-        code = code.replaceAll("-", " "); // some JS string magic to display error message. See the log above in the console
+        code = code.replaceAll("-", " "); 
         code = code.replaceAll("auth/", "");
         setErrorMessage(code);
       });
@@ -42,10 +41,10 @@ export default function SignUpPage({ showLoader }) {
 
   async function saveUserInfo() {
     const userToUpdate = {
-      name: name, // name fra state
-      age: age, //age fra state
-      weight: weight, //weight fra state
-      height: height, // height fra state
+      name: name, 
+      age: age, 
+      weight: weight, 
+      height: height, 
     };
     const docRef = doc(usersRef, auth.currentUser.uid);
     await setDoc(docRef, userToUpdate);

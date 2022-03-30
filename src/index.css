@@ -28,10 +28,6 @@ h3 {
   letter-spacing: 0.1px;
 }
 
-a {
-  color: var(--green);
-}
-
 .page {
   padding: 1em;
   padding-bottom: 4em;
@@ -45,25 +41,9 @@ a {
   text-align: center;
   margin-top: 200px;
 }
-.text-error {
-  color: var(--text-color-danger);
-}
 
-.text-error:first-letter {
-  text-transform: uppercase;
-}
 
 /* ---------- animations ---------- */
-/* fade in */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
 
 @keyframes spin {
   0% {
@@ -75,7 +55,7 @@ a {
   }
 }
 
-/* ---------- nav styling ---------- */
+/* ---------- nav  ---------- */
 nav {
   width: auto;
   background-color: white;
@@ -87,7 +67,6 @@ nav {
   z-index: 10;
 }
 
-/* Style the links inside the navigation bar */
 nav a {
   display: inline-block;
   color: black;
@@ -98,19 +77,12 @@ nav a {
   font-size: 0.5rem;
 }
 
-/* Change the color of links on hover */
-nav a:hover {
-  background-color: #ebebeb;
-  color: black;
-}
-
-/* Add a color to the active/current link */
 nav a.active {
   background-color: #ebebeb;
   color: black;
 }
 
-/* ---------- grid container styling ---------- */
+/* ---------- grid container  ---------- */
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -126,13 +98,8 @@ nav a.active {
   padding: 1.5em;
   background-color: var(--white);
   transition: 0.5s;
-  animation: fadeIn 0.5s;
   cursor: pointer;
   border-radius: 15px;
-}
-
-.grid-container > article:hover {
-  box-shadow: 0 8px 16px 0 grey;
 }
 
 .grid-container > article img {
@@ -141,7 +108,7 @@ nav a.active {
   object-fit: cover;
 }
 
-/* ---------- form styling ---------- */
+/* ---------- form  ---------- */
 
 form {
   margin: auto;
@@ -162,6 +129,8 @@ form button a {
   color: white;
 }
 
+/* ---------- buttons  ---------- */
+
 button {
   font-weight: 300;
   text-align: center;
@@ -178,18 +147,6 @@ button {
   border-radius: 50px;
   font-family: "Lato", sans-serif;
 }
-
-.btn-outline {
-  margin-bottom: 100px !important;
-}
-
-button:hover {
-  background-color: #6ecd6b;
-  padding: 12px 15px;
-  font-size: 1em;
-  max-width: 350px;
-}
-
 
 button.button {
   background-color: #6ecd6b;
@@ -308,23 +265,6 @@ form .file-input {
   transition: visibility 0s 0.4s, opacity 0.4s linear;
 }
 
-/* ---------- Avatar  ---------- */
-.avatar {
-  text-align: left;
-  position: relative;
-  bottom: -13px;
-}
-
-.avatar p {
-  margin: 0;
-}
-
-article .avatar img {
-  max-width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 50%;
-}
 
 /*----------- Logo ---------*/
 .logo {
@@ -370,8 +310,6 @@ article .avatar img {
 input.checkbox {
   box-shadow: none;
 }
-
-/* ---------- opret træningsplan  ---------- */
 
 
 /* ---------- fremskridt  ---------- */

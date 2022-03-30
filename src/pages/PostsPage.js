@@ -10,21 +10,19 @@ export default function HomePage({ post, showLoader }) {
     useEffect(() => {
         const unsubscribe = onSnapshot(favsRef, data => {
             const favData = data.docs.map(doc => {
-                // map through all docs (object) from post collection
-                return { ...doc.data(), id: doc.id }; // changing the data structure so it's all gathered in one object
+                
+                return { ...doc.data(), id: doc.id }; 
             });
             console.log(favData);
             setPosts(favData);
             showLoader(false);
         });
-        return () => unsubscribe(); // tell the post component to unsubscribe from listen on changes from firestore
+        return () => unsubscribe(); 
     }, [showLoader]);
 
     const navigate = useNavigate();
 
-    /**
-     * handleClick is called when user clicks on the Article (PostCard)
-     */
+    
     function handleClick() {
         navigate(`/ny-plan`);
     }
@@ -39,7 +37,7 @@ export default function HomePage({ post, showLoader }) {
                     <PostCard post={post} key={post.id} />
                 ))}
                 <button className="button" 
-                //onClick={}
+                
                 >
                 Se alle
             </button>
@@ -50,7 +48,7 @@ export default function HomePage({ post, showLoader }) {
                     <PostCard post={post} key={post.id} />
                 ))}
                 <button className="button" 
-                //onClick={}
+                
                 >
                 Se alle
             </button>

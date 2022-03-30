@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection } from "firebase/firestore";
 
-// firebaseConfig object copied from project in Firebase Console
 const firebaseConfig = {
   apiKey: "AIzaSyAmn1wKQSk1sDqo4cnswYMa_x_yT7tER6Q",
   authDomain: "fitness-tracker-fb825.firebaseapp.com",
@@ -14,7 +13,7 @@ const firebaseConfig = {
 const firebaseApp = initializeApp(firebaseConfig);
 const db = getFirestore(firebaseApp);
 
-export const usersRef = collection(db, "users"); // reference to users collection i firestore
-export const postsRef = collection(db, "posts"); // reference to posts collection i firestore
+export const usersRef = collection(db, "users"); 
+export const postsRef = collection(db, "posts"); 
 export const favsRef = collection(db, "favorites");
 

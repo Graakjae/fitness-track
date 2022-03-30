@@ -1,53 +1,48 @@
-import { doc, getDoc, updateDoc, deleteDoc } from "@firebase/firestore";
+import { doc, getDoc, deleteDoc } from "@firebase/firestore";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import PostForm from "../components/PostForm";
 import { favsRef } from "../firebase-config";
 
-export default function UpdatePage({ selectedPosts, showLoader }) {
-    const params = useParams(); // url parameter
-    const postId = params.id; // get post id from url parameter
+export default function UpdatePage({ showLoader }) {
+    const params = useParams(); 
+    const postId = params.id; 
     const [post, setPost] = useState({});
     const navigate = useNavigate();
 
     useEffect(() => {
         async function getPost() {
             showLoader(true);
-            const docRef = doc(favsRef, postId); // create post ref based on postId from url parameter
-            const docData = await getDoc(docRef); // get post data (one specific post)
-            setPost(docData.data()); // setting post state with data from firestore
+            const docRef = doc(favsRef, postId); 
+            const docData = await getDoc(docRef); 
+            setPost(docData.data()); 
             showLoader(false);
         }
 
         getPost();
-    }, [showLoader, postId]); // called every time postId changes
-
-    /**
-     * handleSubmit updates and existing post based on a postId
-     * handleSubmit is called by the PostForm component
-     */
-    async function handleSubmit(postToUpdate) {
-        showLoader(true);
-        const docRef = doc(favsRef, postId); // create post ref based on postId
-        await updateDoc(docRef, postToUpdate); // update post using the docRef and postToUpdate object (coming from PostForm)
-        navigate("/");
-    }
+    }, [showLoader, postId]); 
 
     async function deletePost() {
-        const confirmDelete = window.confirm(`Er du sikker på du vil slette denne plan?, ${post.name}?`); // show confirm delete dialog
+        const confirmDelete = window.confirm(`Er du sikker på du vil slette denne plan?, ${post.name}?`); 
         if (confirmDelete) {
-            // if user click "OK" then delete post
+            
             showLoader(true);
-            const docRef = doc(favsRef, postId); // create post ref based on postId
-            await deleteDoc(docRef); // delete doc
+            const docRef = doc(favsRef, postId); 
+            await deleteDoc(docRef); 
             navigate("/");
         }
     }
 
     return (
         <section className="page">
-            
-            <PostForm savePost={handleSubmit} post={post} />
+            <h1>{post.name}</h1>
+            {post.posts.map(øvelse => (
+                <article>
+                    <h2>{øvelse.name}</h2>
+                    <p>
+                        {øvelse.muskel}, {øvelse.rating}, {øvelse.reads},
+                    </p>
+                </article>
+            ))}
             
             <button className="button-delete" onClick={deletePost}>
                 Slet træningsplan

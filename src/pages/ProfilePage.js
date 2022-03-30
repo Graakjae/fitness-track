@@ -19,12 +19,12 @@ export default function ProfilePage({ showLoader }) {
 
     async function getUser() {
       if (auth.currentUser) {
-        setEmail(auth.currentUser.email); // set the email state from the auth user objects email property
-        // get more info about the user from users collection
-        const docRef = doc(usersRef, auth.currentUser.uid); // use auth users uid to get user data from users collection
+        setEmail(auth.currentUser.email); 
+
+        const docRef = doc(usersRef, auth.currentUser.uid); 
         const userData = (await getDoc(docRef)).data();
         if (userData) {
-          // if userData exists set states with values from userData (data from firestore)
+          
           setName(userData.name);
           setAge(userData.age);
           setWeight(userData.weight);
@@ -36,7 +36,7 @@ export default function ProfilePage({ showLoader }) {
     }
 
     getUser();
-  }, [auth.currentUser, showLoader]); // dependencies: useEffect is executed when auth.currentUser changes
+  }, [auth.currentUser, showLoader]); 
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -48,32 +48,29 @@ export default function ProfilePage({ showLoader }) {
       weight: weight,
       height: height,
       image: image,
-    }; // create an object to hold the user to update properties
-    const docRef = doc(usersRef, auth.currentUser.uid); // create reference to the user in firestore
-    await setDoc(docRef, userToUpdate); // set/update the user in firestore with the values from userToUpdate/values from input fields
+    }; 
+    const docRef = doc(usersRef, auth.currentUser.uid); 
+    await setDoc(docRef, userToUpdate); 
     showLoader(false);
   }
 
   function handleSignOut() {
-    signOut(auth); // sign out from firebase/auth
+    signOut(auth); 
   }
 
-  /**
-   * handleImageChange is called every time the user chooses an image in the fire system.
-   * The event is fired by the input file field in the form
-   */
+  
   function handleImageChange(event) {
     const file = event.target.files[0];
     if (file.size < 500000) {
-      // image file size must be below 0,5MB
+      
       const reader = new FileReader();
       reader.onload = (event) => {
         setImage(event.target.result);
       };
       reader.readAsDataURL(file);
-      setErrorMessage(""); // reset errorMessage state
+      setErrorMessage(""); 
     } else {
-      // if not below 0.5MB display an error message using the errorMessage state
+      
       setErrorMessage("The image file is too big!");
     }
   }
