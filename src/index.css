@@ -137,6 +137,10 @@ nav a.active {
   object-fit: cover;
 }
 
+.grid-container button:last-child{
+  margin-bottom: 200px;
+}
+
 /* ---------- form styling ---------- */
 
 form {
@@ -356,16 +360,19 @@ input.checkbox {
 
 /* ---------- fremskridt  ---------- */
 
-.page img {
+
+.fremskridt img {
   max-width: 300px;
   padding-bottom: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.page img:last-child{
+.fremskridt img:last-child{
   padding-bottom: 100px;
 }
 
-.page h3 {
-  text-align: left;
-  margin-left: 7%;
+.fremskridt h3 {
+  text-align: center;
 }
