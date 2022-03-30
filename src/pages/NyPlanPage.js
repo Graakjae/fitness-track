@@ -47,7 +47,7 @@ export default function NewFavList({ showLoader }) {
 
     function handleRemove() {
         console.log(selectedPost);
-        const filteredData = selectedPosts.filter(post => post.id !== selectedPost);
+        const filteredData = selectedPosts.filter(post => post.id != selectedPost);
         setSelectedPosts(filteredData);
     }
 
