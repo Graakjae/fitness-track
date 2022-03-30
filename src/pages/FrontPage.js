@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
 import React from "react";
-
-import logo from "./logo.png";
+//import logo from "./logo.png";
 
 
 
@@ -40,7 +39,7 @@ export default function SignInPage({ showLoader }) {
       <main>
         <h1>Fitness Tracker</h1>
 
-        <img src={logo} alt="Logo" />
+         
 
         <form onSubmit={signIn}>
           <button>

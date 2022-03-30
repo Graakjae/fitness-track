@@ -167,23 +167,17 @@ button {
   cursor: pointer;
   border: none;
   color: white;
-  background-color: #b9f5d3;
+  background-color: #6ecd6b;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 0.5em 1em;
   font-size: 0.8em;
   display: block;
   margin: 3em auto 0;
-  border-radius: 15px;
+  border-radius: 50px;
   font-family: "Lato", sans-serif;
 }
 
-button:hover {
-  background-color: #6ecd6b;
-  padding: 12px 15px;
-  font-size: 1em;
-  max-width: 350px;
-}
 
 button.button {
   background-color: #6ecd6b;
@@ -228,14 +222,13 @@ button.button-fixed {
   font-size: 17px;
 }
 
-.btn-sign-out {
-  position: absolute;
-  right: 0;
-  top: 0;
-  cursor: pointer;
-  font-size: 0.7em;
-  padding: 2.032em 1em;
+button.button-logud {
+  background-color: #6ecd6b;
+  color: white;
+  margin-bottom: 100px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 }
+
 
 input {
   margin: 1em auto;
