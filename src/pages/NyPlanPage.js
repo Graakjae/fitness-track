@@ -38,7 +38,6 @@ export default function NewFavList({ showLoader }) {
     }
 
     function handleAddPost() {
-
         const post = posts.find(post => post.id == selectedPost);
         console.log(rating, reads, post);
         post.rating = rating;

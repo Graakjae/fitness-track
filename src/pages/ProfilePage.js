@@ -151,7 +151,7 @@ export default function ProfilePage({ showLoader }) {
         <p className="text-error">{errorMessage}</p>
         <button>Gem</button>
       </form>
-      <button className="btn-outline" onClick={handleSignOut}>
+      <button className="button" onClick={handleSignOut}>
         Logud
       </button>
     </section>
