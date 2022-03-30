@@ -6,7 +6,7 @@ import { favsRef } from "../firebase-config";
 export default function UpdatePage({ showLoader }) {
     const params = useParams(); 
     const postId = params.id; 
-    const [post, setPost] = useState({});
+    const [post, setPost] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -39,7 +39,7 @@ export default function UpdatePage({ showLoader }) {
                 <article>
                     <h2>{øvelse.name}</h2>
                     <p>
-                        {øvelse.muskel}, {øvelse.rating}, {øvelse.reads},
+                        {øvelse.muskel}, {øvelse.rating}, {øvelse.reads}
                     </p>
                 </article>
             ))}
