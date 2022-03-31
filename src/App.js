@@ -21,18 +21,16 @@ function App() {
 
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      //user is authenticated / signed in
-      setIsAuth(true); // set isAuth to true
-      localStorage.setItem("isAuth", true); // also, save isAuth in localStorage
+      
+      setIsAuth(true); 
+      localStorage.setItem("isAuth", true); 
     } else {
-      // user is not authenticated / not signed in
-      setIsAuth(false); // set isAuth to false
-      localStorage.removeItem("isAuth"); // remove isAuth from localStorage
+      
+      setIsAuth(false); 
+      localStorage.removeItem("isAuth"); 
     }
   });
 
-
-    // variable holding all private routes including the nav bar
     const privateRoutes = (
         <>
             <Nav />
@@ -49,7 +47,6 @@ function App() {
     );
 
 
-  // variable holding all public routes without nav bar
   const publicRoutes = (
     <Routes>
       <Route path="/front" element={<FrontPage showLoader={setShowLoader} />} />
@@ -65,8 +62,6 @@ function App() {
     </Routes>
   );
 
-  // if user is authenticated, show privateRoutes, else show publicRoutes
-  // also, display or display not the <Loader/> based on showLoader state
   return (
     <main>
       {isAuth ? privateRoutes : publicRoutes}
