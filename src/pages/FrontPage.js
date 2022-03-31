@@ -40,7 +40,7 @@ export default function SignInPage({ showLoader }) {
 
         <form onSubmit={signIn}>
           <button>
-            <Link to="/sign-up">Opret</Link>
+            <Link to="/sign-up">Opret bruger</Link>
           </button>
           <button>
             <Link to="/sign-in">Log ind</Link>

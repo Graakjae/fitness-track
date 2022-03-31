@@ -58,7 +58,7 @@ function App() {
         path="/sign-up"
         element={<SignUpPage showLoader={setShowLoader} />}
       />
-      <Route path="*" element={<Navigate to="/sign-in" />} />
+      <Route path="*" element={<Navigate to="/front" />} />
     </Routes>
   );
 
