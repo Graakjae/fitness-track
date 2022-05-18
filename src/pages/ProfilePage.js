@@ -59,21 +59,6 @@ export default function ProfilePage({ showLoader }) {
   }
 
   
-  function handleImageChange(event) {
-    const file = event.target.files[0];
-    if (file.size < 500000) {
-      
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        setImage(event.target.result);
-      };
-      reader.readAsDataURL(file);
-      setErrorMessage(""); 
-    } else {
-      
-      setErrorMessage("The image file is too big!");
-    }
-  }
 
   return (
     <section className="page">
@@ -84,7 +69,6 @@ export default function ProfilePage({ showLoader }) {
             type="file"
             className="file-input"
             accept="image/*"
-            onChange={handleImageChange}
           />
           <img
             className="image-preview"

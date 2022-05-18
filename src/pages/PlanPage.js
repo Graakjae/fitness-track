@@ -39,7 +39,7 @@ export default function UpdatePage({ showLoader }) {
                 <article className="ovelser">
                     <h2>{øvelse.name}</h2>
                     <p>
-                       Set: {øvelse.rating} Reps: {øvelse.reads}
+                       Set: {øvelse.Set} Reps: {øvelse.Reps}
                     </p>
                 </article>
             ))}
